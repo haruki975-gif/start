@@ -60,7 +60,7 @@ public class MemberServiceImpl implements MemberService{
 		// 첫번째 인자 : 평문, 두번째 인자 : 암호문
 		
 		String encodePassword = passwordEncoder.encode(passwordEntity.getNewPassword());
-		Long memberNo = passwordMatches(passwordEncoder.encode(passwordEntity.getNewPassword()));
+		Long memberNo = passwordMatches(passwordEntity.getCurrentPassword());
 		
 		Map<String, Object> changeRequest = new HashMap();
 		changeRequest.put("memberNo", memberNo);
