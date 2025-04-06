@@ -1,9 +1,10 @@
 package com.kh.start.token.model.service;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+
 import com.kh.start.auth.util.JwtUtil;
 import com.kh.start.token.model.dao.TokenMapper;
 import com.kh.start.token.model.vo.RefreshToken;
@@ -11,6 +12,7 @@ import com.kh.start.token.model.vo.RefreshToken;
 import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor

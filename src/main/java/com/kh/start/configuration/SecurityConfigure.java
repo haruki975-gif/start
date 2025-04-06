@@ -58,7 +58,7 @@ public class SecurityConfigure {
 						   .authorizeHttpRequests(requests -> {
 							   requests.requestMatchers(HttpMethod.POST, "/auth/login", "/auth/refresh", "/members").permitAll();
 							   requests.requestMatchers("/admin/**").hasRole("ADMIN");
-							   requests.requestMatchers(HttpMethod.GET, "/uploads/**", "/boards/**", "/comments/**").permitAll();
+							   requests.requestMatchers(HttpMethod.GET, "/uploads/**", "/boards/**", "/comments/**", "/players").permitAll();
 							   requests.requestMatchers(HttpMethod.PUT, "/members", "/boards/**").authenticated();
 							   requests.requestMatchers(HttpMethod.DELETE, "/members", "/boards/**").authenticated();
 							   requests.requestMatchers(HttpMethod.POST, "/boards", "/comments").authenticated();
